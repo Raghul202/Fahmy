@@ -5,117 +5,128 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+          font-family: 'Roboto', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
 
-        .header-content {
-            background-color: #4c4c4c;
-            color: #fff;
-            padding: 1.5rem;
-            text-align: center;
-        }
+      .header-content {
+          background-color: #333;
+          color: #fff;
+          padding: 1.5rem;
+          text-align: center;
+      }
 
-        .header-content h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
+      .header-content h1 {
+          margin: 0;
+          font-size: 2.2rem;
+      }
 
-        .header-content nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 0.5rem;
-        }
+      .header-content nav a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 1rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+          transition: color 0.3s ease-in-out;
+      }
 
-        .header-content nav a::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #fff;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
+      .header-content nav a:hover {
+          color: #ccc;
+      }
 
-        .header-content nav a:hover::before {
-            transform: translateX(0);
-        }
+      .main {
+          flex-grow: 1;
+          padding: 2.5rem;
+          background-color: #f6f6f6;
+      }
 
-        .main {
-            flex-grow: 1;
-            padding: 2rem;
-            background-color: #f4f4f4;
-        }
+      .section {
+          margin-bottom: 3rem;
+      }
 
-        .section {
-            margin-bottom: 2rem;
-        }
+      .section h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1.2rem;
+      }
 
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1.5rem;
-        }
+      .section p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #555;
+      }
 
-        .dashboard-card {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+      .dashboard {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1.8rem;
+      }
 
-        .data-viz-icon::before {
-            content: "📊";
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 1rem;
-            color: #4c4c4c;
-        }
+      .dashboard-card {
+          background-color: #fff;
+          padding: 1.8rem;
+          border-radius: 8px;
+          text-align: center;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
 
-        .code-icon::before {
-            content: "💻";
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 1rem;
-            color: #4c4c4c;
-        }
+      .dashboard-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
 
-        .footer-content {
-            background-color: #4c4c4c;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-            margin-top: auto;
-        }
+      .data-viz-icon::before {
+          content: "📊";
+          font-size: 3rem;
+          display: block;
+          margin-bottom: 1.2rem;
+          color: #333;
+      }
 
-        .footer-content a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
+      .code-icon::before {
+          content: "💻";
+          font-size: 3rem;
+          display: block;
+          margin-bottom: 1.2rem;
+          color: #333;
+      }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
+      .footer-content {
+          background-color: #333;
+          color: #fff;
+          padding: 1.2rem;
+          text-align: center;
+          margin-top: auto;
+          font-size: 0.9rem;
+      }
 
-            .header-content nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+      .footer-content a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 1rem;
+          transition: color 0.3s ease-in-out;
+      }
+
+      .footer-content a:hover {
+          color: #ccc;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+          .dashboard {
+              grid-template-columns: 1fr;
+          }
+
+          .header-content nav a {
+              display: block;
+              margin: 0.7rem 0;
+          }
+      }
+  </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
