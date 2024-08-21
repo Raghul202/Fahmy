@@ -56,7 +56,8 @@
 
     .header-nav {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
+      align-items: center;
     }
 
     .header-nav a {
@@ -65,8 +66,14 @@
       font-size: 1.1rem;
       font-weight: 500;
       position: relative;
-      padding: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
       transition: all 0.3s ease-in-out;
+    }
+
+    .header-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .header-nav a::before {
@@ -74,19 +81,31 @@
       position: absolute;
       bottom: 0;
       left: 50%;
-      width: 0;
+      transform: translateX(-50%) scaleX(0);
+      width: 80%;
       height: 2px;
       background: linear-gradient(to right, #00d9ff, #00a2ff);
-      transition: width 0.3s ease, left 0.3s ease;
+      transition: transform 0.3s ease-in-out;
     }
 
     .header-nav a:hover::before {
-      width: 100%;
-      left: 0;
+      transform: translateX(-50%) scaleX(1);
     }
 
-    .header-nav a:hover {
-      color: #00d9ff;
+    .header-button {
+      background-color: #00a2ff;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .header-button:hover {
+      background-color: #008cd1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .main {
@@ -159,6 +178,10 @@
         padding-top: 1rem;
       }
 
+      .header-nav a {
+        font-size: 1rem;
+      }
+
       .main {
         padding: 3rem 2rem;
       }
@@ -192,7 +215,7 @@
 
       .header-nav a {
         font-size: 0.9rem;
-        margin-left: 0;
+        padding: 0.4rem 0.8rem;
       }
 
       .hero-section h1 {
@@ -219,6 +242,7 @@
       <a href="certifications.html">Certifications</a>
       <a href="extracurricular.html">Extracurricular</a>
     </nav>
+    <button class="header-button">Contact Me</button>
   </header>
 
   <main class="main">
