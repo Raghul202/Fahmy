@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahmida - Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #1565c0;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #fff;
+      margin: 0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e3f2fd;
+    }
+
+    /* Main Content Styles */
+    main {
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      color: #1565c0;
+      font-size: 36px;
+      margin-top: 0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    h2 i {
+      margin-right: 10px;
+      font-size: 28px;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .dashboard-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dashboard-card h3 {
+      color: #1565c0;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .dashboard-card p {
+      margin-bottom: 0;
+    }
+
+    .dashboard-card i {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #1565c0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .footer-content a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .footer-content a:hover {
+      transform: scale(1.1);
+      color: #e3f2fd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-chart-bar"></i>Skills</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="extracurricular.html">Extracurricular</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2><i class="fas fa-chart-line"></i>Skills</h2>
+      <div class="dashboard">
+        <div class="dashboard-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Data Visualization</h3>
+          <p>Power BI</p>
+        </div>
+        <div class="dashboard-card">
+          <i class="fas fa-chart-pie"></i>
+          <h3>Statistical Analysis</h3>
+          <p>Strong analytical and problem-solving skills</p>
+        </div>
+        <div class="dashboard-card">
+          <i class="fas fa-laptop"></i>
+          <h3>Computer Skills</h3>
+          <p>Microsoft Word, Excel, Power Point</p>
+        </div>
+        <div class="dashboard-card">
+          <i class="fas fa-code"></i>
+          <h3>Programming</h3>
+          <p>SQL, Python</p>
+        </div>
+        <div class="dashboard-card">
+          <i class="fas fa-comments"></i>
+          <h3>Communication</h3>
+          <p>Strong verbal and written communication skills</p>
+        </div>
+        <div class="dashboard-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Quick Learning</h3>
+          <p>Ability to adapt and learn new skills quickly</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+      <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://maps.google.com/?q=1234+Street+Name,+City,+Country" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
