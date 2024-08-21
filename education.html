@@ -3,153 +3,221 @@
 <head>
     <title>Education - Fahmida</title>
     <style>
-      /* Global Styles */
-      body {
-          font-family: 'Roboto', Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-      }
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e2b4f, #3e5381, #1e2b4f);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 20s ease infinite;
+        }
 
-      .header-content {
-          background-color: #333;
-          color: #fff;
-          padding: 1.5rem;
-          text-align: center;
-      }
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-      .header-content h1 {
-          margin: 0;
-          font-size: 2.2rem;
-      }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-      .header-content nav a {
-          color: #fff;
-          text-decoration: none;
-          margin: 0 1rem;
-          font-size: 1.1rem;
-          font-weight: 500;
-          transition: color 0.3s ease-in-out;
-      }
+        .header-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
-      .header-content nav a:hover {
-          color: #ccc;
-      }
+        .header-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-left: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
 
-      .main {
-          flex-grow: 1;
-          padding: 2.5rem;
-          background-color: #f6f6f6;
-      }
+        .header-nav a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #00d9ff, #00a2ff);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-in-out;
+        }
 
-      .section {
-          margin-bottom: 3rem;
-      }
+        .header-nav a:hover {
+            color: #e6e6e6;
+        }
 
-      .section h2 {
-          font-size: 1.8rem;
-          margin-bottom: 1.2rem;
-      }
+        .header-nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
-      .section p {
-          font-size: 1.1rem;
-          line-height: 1.6;
-          color: #555;
-      }
+        .main {
+            flex-grow: 1;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem 3rem;
+            border-radius: 8px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
-      .dashboard {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-gap: 1.8rem;
-      }
+        .section {
+            margin-bottom: 3rem;
+        }
 
-      .dashboard-card {
-          background-color: #fff;
-          padding: 1.8rem;
-          border-radius: 8px;
-          text-align: center;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
 
-      .dashboard-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
 
-      .data-viz-icon::before {
-          content: "📊";
-          font-size: 3rem;
-          display: block;
-          margin-bottom: 1.2rem;
-          color: #333;
-      }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1.8rem;
+        }
 
-      .code-icon::before {
-          content: "💻";
-          font-size: 3rem;
-          display: block;
-          margin-bottom: 1.2rem;
-          color: #333;
-      }
+        .dashboard-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.8rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: #fff;
+        }
 
-      .footer-content {
-          background-color: #333;
-          color: #fff;
-          padding: 1.2rem;
-          text-align: center;
-          margin-top: auto;
-          font-size: 0.9rem;
-      }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
 
-      .footer-content a {
-          color: #fff;
-          text-decoration: none;
-          margin: 0 1rem;
-          transition: color 0.3s ease-in-out;
-      }
+        .education-icon::before {
+            content: "🎓";
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1.2rem;
+            color: #00d9ff;
+        }
 
-      .footer-content a:hover {
-          color: #ccc;
-      }
+        .footer {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-      /* Responsive Styles */
-      @media (max-width: 768px) {
-          .dashboard {
-              grid-template-columns: 1fr;
-          }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease-in-out;
+        }
 
-          .header-content nav a {
-              display: block;
-              margin: 0.7rem 0;
-          }
-      }
-  </style>
+        .footer a:hover {
+            color: #e6e6e6;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .header-logo {
+                font-size: 1.5rem;
+            }
+
+            .header-nav a {
+                font-size: 1rem;
+                margin-left: 1.5rem;
+            }
+
+            .main {
+                padding: 3rem 2rem;
+                margin: 1.5rem 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+
+            .footer {
+                padding: 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="header-content">
-        <h1>Fahmida - Data Analyst</h1>
-        <nav>
+    <header class="header">
+        <div class="header-logo">Fahmida</div>
+        <nav class="header-nav">
             <a href="index.html">Home</a>
             <a href="education.html">Education</a>
             <a href="skills.html">Skills</a>
             <a href="certifications.html">Certifications</a>
             <a href="extracurricular.html">Extracurricular</a>
         </nav>
-    </div>
+    </header>
 
-    <div class="main">
+    <main class="main">
         <div class="section">
             <h2>Education</h2>
             <div class="dashboard">
                 <div class="dashboard-card">
+                    <div class="education-icon"></div>
                     <h3>Data Analyst Course</h3>
                     <p>Dataspark, Kozhikode</p>
                     <p>Expected Completion: December, 2024</p>
                 </div>
                 <div class="dashboard-card">
+                    <div class="education-icon"></div>
                     <h3>Bachelor of Arts</h3>
                     <p>Malayalam and Sociology (Double Main)</p>
                     <p>Calicut University</p>
@@ -157,12 +225,14 @@
                     <p>GPA: 7.6</p>
                 </div>
                 <div class="dashboard-card">
+                    <div class="education-icon"></div>
                     <h3>Higher Secondary</h3>
                     <p>Humanities</p>
                     <p>AMHSS Poovambayi, Kozhikode</p>
                     <p>Duration: 2019 - 2021</p>
                 </div>
                 <div class="dashboard-card">
+                    <div class="education-icon"></div>
                     <h3>High School</h3>
                     <p>CBSE</p>
                     <p>Markaz Public School, Blussery, Kozhikode</p>
@@ -170,12 +240,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="footer-content">
+    <footer class="footer">
         <a href="tel:+1234567890">+1 234 567 890</a>
         <a href="mailto:example@example.com">example@example.com</a>
         <a href="https://maps.google.com/?q=1234+Street+Name,+City,+Country" target="_blank">1234 Street Name, City, Country</a>
-    </div>
+    </footer>
 </body>
 </html>
